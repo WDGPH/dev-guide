@@ -253,6 +253,16 @@ Providing examples or tutorial of how to use your code can be an extremely helpf
 ### Welcoming Contributions
 In your `README.md` or a separate `CONTRIBUTING.md` document, clearly specify the types of contributions that are welcome. This could include code contributions, documentation improvements, bug reports, feature requests, etc.
 
+## Project Visualisation
+
+When applicable it is helpful to visualise the project you are working on, especially when working on pipeline projects. Visualising key components of the process, and how different stages of the project fit together can help in the design and communication about the project, especially in new projects where there are many moving parts, where it is imparative to have team members be clear on the vision of the project. Diagrams can be a very effective way of making sure the team is on the same page. In addition it is a fast way of communicating how the project looks and what it will involve with a wide range of people with varying backgrounds. Visualisations also help with onboarding, since new team members can quickly get a high level understanding of where the project is at and how the various pieces fit together.
+
+Tools you may find helpful visualising your project:
+- drawio: is a free open source application, avaliable as a VS code plug-in, webapp, or desktop application, that can help you create diagrams and visuals.
+- mermaid.js: is good for infustructure diagrams, allows for incorprating .md documents, and has version control to allow easytracking of changes.
+
+Like most other forms of documentation, diagrams and visualisations will become outdated as the project evolves, therefore, it is important when visualising parts of a project to document which version/phase/what date, this diagram applies to, and regularly update key diagrams as the project grows and changes.
+ 
 ## Licenses
 All open-source projects should include a license, typically in the form of a `LICENSE.md` file in the top level directory. This clarifies the terms under which others can use, modify, or distribute the code. There are many licenses available for open-source projects, two commonly used ones are:
 

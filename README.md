@@ -31,7 +31,7 @@ This guide can only be kept current, useful, and forward-looking with your contr
   - [Structure](#structure)
   - [Usage Instructions](#usage-instructions)
   - [Welcoming Contributions](#welcoming-contributions)
-  - [Project Visualization](project-visualization)
+  - [Project Visualization](#project-visualization)
 - [Licenses](#licenses)
 - [Privacy](#privacy)
 - [Code Readability and Style](#code-readability-and-style)
@@ -256,14 +256,19 @@ In your `README.md` or a separate `CONTRIBUTING.md` document, clearly specify th
 
 ### Project Visualization
 
-When applicable it is helpful to visualize the project you are working on, especially when working on pipeline projects, databse design, or composable programing. Visualizing key components of the process, and how different stages of the project fit together can help in the design and communication about the project, especially in new projects where there are many moving parts, where it is imperative to have team members be clear on the vision of the project. Diagrams can be a very effective way of making sure the team is on the same page. In addition it is a fast way of communicating how the project looks and what it will involve with a wide range of people with varying backgrounds. Visualisations also help with onboarding, since new team members can quickly get a high level understanding of where the project is at and how the various pieces fit together.
+When applicable it is helpful to visualize the project you are working on, especially when working on pipeline projects, databse design, or composable programing. Visualizing key aspects of a project’s structure (e.g. data pipelines, database schemas, or function chains), with diagrams, helps to provide a clear high-level overview to a project, and assists in discussing modifications or improvements to the code-base. Visualizations also help with onboarding, since new team members can quickly get a high level understanding of where the project is at and how the various pieces fit together.
 
-Tools you may find helpful visualising your project:
+Tools you may find helpful Visualizing your project:
 - [drawio](https://app.diagrams.net/): is a free open source application, avaliable as a VS code plug-in, webapp, or desktop application, that can help you create diagrams and visuals.
-- [mermaid.js](https://mermaid.js.org/): is good for infustructure diagrams, allows for incorprating .md documents, and has version control to allow easytracking of changes.
-- [Ilograph](https://www.ilograph.com/) and [Deepwiki](https://deepwiki.com/GRIFFINCollaboration/GRSISort/1-grsisort-overview): are both examples of tools that can diagram automatically as code is being generated. Both are also free and open  soucre
+- [mermaid.js](https://mermaid.js.org/): is good for infrastructure diagrams, allows for incorporating .md documents, and has version control to allow easy tracking of changes.
+-  [PlantUML](https://plantuml.online/uml/2orEBLBGjLDmB2Z8oKnEBCdCprEmKYXABInDBIxXIamkoInBB4b5bkP2LgeBr1eACWAafxWWFwyubIib5Qis0000): This tool is widely used for creating UML diagrams from plain text descriptions, making it ideal for documenting code and CI/CD processes
+- [Ilograph](https://www.ilograph.com/): is an example of a tool that can diagram automatically as code is being generated, that is free and open source
 
-Like most other forms of documentation, diagrams and visualizations will become outdated as the project evolves, therefore, it is important when visualizing parts of a project to document which version/phase/what date, this diagram applies to, and regularly update key diagrams as the project grows and changes.
+Like most other forms of documentation, diagrams and visualizations will become outdated as the project evolves, therefore, it is important when visualizing parts of a project to document which version/phase/what date, this diagram applies to, and regularly update key diagrams as the project grows and changes. 
+
+However, best practice would be to version track Visualizations in the git project itself, github actions allow for rendering drawio diagramns into documentation branches such as:
+- [Drawio rendering actions](https://github.com/marketplace/actions/drawio-rendering-action)
+- [Mermaid rendering actions](https://github.com/ksclarke/mermaid-pr-render)
  
 ## Licenses
 All open-source projects should include a license, typically in the form of a `LICENSE.md` file in the top level directory. This clarifies the terms under which others can use, modify, or distribute the code. There are many licenses available for open-source projects, two commonly used ones are:

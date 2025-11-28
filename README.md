@@ -30,6 +30,7 @@ This guide can only be kept current, useful, and forward-looking with your contr
     - [Releases](#releases)
     - [Main Branch Protections](#main-branch-protections)
     - [GitHub Actions](#github-actions)
+    - [GitHub Submodules](#github-submodules)
 - [Project Documentation](#project-documentation)
   - [Structure](#structure)
   - [Usage Instructions](#usage-instructions)
@@ -261,6 +262,57 @@ Before a PR is merged into the main branch, you can also require a review by at 
 #### GitHub Actions
 
 GitHub Actions is a powerful feature that automates certain tasks within your GitHub repository. Actions are event-driven, meaning they can be configured to execute or "trigger" when specific events occur in your repository, such as a push to a particular branch, the creation of a PR, or the opening of an issue. One of the key strengths of GitHub Actions is its flexibility. It can be used to automate a wide range of tasks relevant to software development, and it supports multiple languages and platforms. They may be used for tasks such as building documentation, running tests and test coverage reports, or code style checks.
+
+#### GitHub Submodules
+
+Git submodules allow you to include one Git repository inside another while
+tracking the exact commit being used. WDGPH uses submodules to maintain shared,
+version-controlled resources such as PHU template libraries, YAML/JSON standards
+registries, and other assets that must remain consistent across pipelines.
+
+Submodules help ensure:
+- **Reproducibility** — pipelines use pinned versions of shared assets
+- **Governance** — changes are reviewed once and propagated consistently
+- **Consistency** — PHUs share aligned templates, schemas, and reference data
+- **Modularity** — shared assets evolve independently from pipeline code
+
+#### Adding a Submodule
+
+```sh
+git submodule add <REPO_URL> <path/to/submodule>
+git commit -m "Add <submodule> as a submodule"
+```
+
+#### Cloning a Repo with Submodules
+
+```sh
+git clone --recurse-submodules <REPO_URL>
+```
+
+if already cloned... 
+
+```sh
+git submodule update --init --recursive
+```
+
+#### Updating a Submodule 
+
+```sh
+cd <path/to/submodule>
+git pull origin main
+cd ..
+git add <path/to/submodule>
+git commit -m "Update submodule pointer"
+```
+
+#### Removing a Submodule
+
+```sh
+git submodule deinit -f <path/to/submodule>
+git rm -f <path/to/submodule>
+rm -rf .git/modules/<path/to/submodule>
+git commit -m "Remove submodule"
+```
 
 ## Project Documentation
 
